@@ -5,3 +5,18 @@
 # add whatever you want but when ever you want to add back to the repository make sure the file is tracked by running git add (filename) then git commit (enter text to let me know what you've added or changed) then run git push it will automatically push to the repository 
 
 # if you get stuck look up a video online for basic git source control
+
+import turtle as t
+import Germany as G
+
+if __name__=='__main__':
+
+    screen = t.Screen()
+    screenHeight = screen.window_height()
+    screenWidth = screen.window_width()
+    topLeft = (0, screenHeight)
+    print(screenWidth, screenHeight)
+    t.setposition(0,screenHeight -200)
+    G.germanyFlag()
+    t.exitonclick()
+    

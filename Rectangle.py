@@ -26,20 +26,9 @@ class Rectangle(Shape):
         self.draw()
         t.end_fill()
 
-if __name__ == '__main__':
-    myShape = Rectangle()
-    myShape.draw()
-    myShape.set_height(34)
-    myShape.drawWithColor()
-    myShape.updateYCor(-34)
-    myShape.moveTurtle()
-    myShape.setFillColor('Red')
-    myShape.drawWithColor()
-    myShape.updateYCor(-33)
-    myShape.moveTurtle()
-    myShape.setFillColor('Yellow')
-    myShape.drawWithColor()
+    
 
+if __name__ == '__main__':
     t.mainloop()
     t.hideturtle()
     

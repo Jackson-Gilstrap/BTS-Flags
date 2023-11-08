@@ -1,6 +1,6 @@
 import turtle as t 
 from TurtleProperties import TurtleProperties as tp
-
+# might violate dry principle try and draw one cross then make a new cross class to draw the second smaller cross
 class Cross():
     def __init__(self, _height= 50, _xCor= 0, _yCor=0, _fillColor='grey'):
       
@@ -32,7 +32,7 @@ class Cross():
     def drawInsideCross(self, angles):
         for angle in angles:
             self.drawPinOfCross(4, angle)
-        self.drawPinOfCross(20, 0)
+        self.drawPinOfCross(19.5, 0)
 
     def drawOutsideCrossWithColor(self, angles, color):
          t.fillcolor(color)
@@ -54,11 +54,11 @@ if __name__=='__main__':
     angles = [270,180,90]
     cross = Cross()
     tp = tp()
-    cross.drawOutsideCrossWithColor(angles)
+    cross.drawOutsideCrossWithColor(angles, 'blue')
     tp.setXCor(-cross.height / 4)
     tp.setYCor(cross.height / 4)
     tp.moveTurtle()
     cross.setHeight(cross.height / 2 )
-    cross.drawInsideCrossWithColor(angles)
+    cross.drawInsideCrossWithColor(angles, 'red')
     t.mainloop()
     t.hideturtle()

@@ -34,13 +34,13 @@ class Cross():
             self.drawPinOfCross(4, angle)
         self.drawPinOfCross(20, 0)
 
-    def drawOutsideCrossWithColor(self, angles):
-         t.fillcolor('white')
+    def drawOutsideCrossWithColor(self, angles, color):
+         t.fillcolor(color)
          t.begin_fill()
          self.drawOutsideCross(angles)
          t.end_fill()
-    def drawInsideCrossWithColor(self, angles):
-         t.fillcolor('navy')
+    def drawInsideCrossWithColor(self, angles, color):
+         t.fillcolor(color)
          t.begin_fill()
          self.drawInsideCross(angles)
          t.end_fill()

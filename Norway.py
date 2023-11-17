@@ -23,7 +23,7 @@ def norwayFlag():
     t.setposition(base.getXCor(),base.getYCor() + 2.2)
     t.pendown()
     cross.setHeight(cross.height / 2 )
-    cross.drawInsideCrossWithColor(angles, 'navy')
+    cross.drawInsideCrossWithColor(angles, 'red')
 
 if __name__== '__main__':
     norwayFlag()

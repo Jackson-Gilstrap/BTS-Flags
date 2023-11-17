@@ -2,7 +2,7 @@ import turtle as t
 from Shape import Shape
 
 class Rectangle(Shape):
-    def __init__(self,_xCor=0, _yCor=0, _height=100, _length=200, _fillColor='black', _borderColor='blue', _borderThickness=3):
+    def __init__(self, _xCor=0, _yCor=0, _height=150, _length=300, _fillColor='black', _borderColor='blue', _borderThickness=3):
         super().__init__(_xCor, _yCor, _fillColor, _borderColor, _borderThickness)
         self.height = _height
         self.length = _length
@@ -29,6 +29,7 @@ class Rectangle(Shape):
     
 
 if __name__ == '__main__':
+<<<<<<< Updated upstream
     t.speed('fast')
     testRectangle = Rectangle()
     testRectangle.drawWithColor()
@@ -36,4 +37,10 @@ if __name__ == '__main__':
     t.mainloop()
 
 
+=======
+    rectangle = Rectangle()
+    rectangle.draw()
+    t.mainloop()
+
+>>>>>>> Stashed changes
     

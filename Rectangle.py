@@ -1,6 +1,6 @@
 import turtle as t
 from Shape import Shape
-from TurtleProperties import TurtleProperties
+
 class Rectangle(Shape):
     def __init__(self,_xCor=0, _yCor=0, _height=100, _length=200, _fillColor='black', _borderColor='blue', _borderThickness=3):
         super().__init__(_xCor, _yCor, _fillColor, _borderColor, _borderThickness)
@@ -29,6 +29,11 @@ class Rectangle(Shape):
     
 
 if __name__ == '__main__':
-    t.mainloop()
+    t.speed('fast')
+    testRectangle = Rectangle()
+    testRectangle.drawWithColor()
     t.hideturtle()
+    t.mainloop()
+
+
     

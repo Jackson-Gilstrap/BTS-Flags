@@ -29,7 +29,6 @@ class Rectangle(Shape):
     
 
 if __name__ == '__main__':
-<<<<<<< Updated upstream
     t.speed('fast')
     testRectangle = Rectangle()
     testRectangle.drawWithColor()
@@ -37,10 +36,4 @@ if __name__ == '__main__':
     t.mainloop()
 
 
-=======
-    rectangle = Rectangle()
-    rectangle.draw()
-    t.mainloop()
-
->>>>>>> Stashed changes
     

@@ -1,8 +1,8 @@
 import turtle as t 
 from Rectangle import Rectangle
-from Cross import Cross
+from Cross import Cross   
 
-def norwayFlag():
+def DenmarkFlag():
     base = Rectangle()
     base.setFillColor('red')
     base.drawWithColor()
@@ -16,13 +16,8 @@ def norwayFlag():
     t.pendown()
     cross.setHeight(25)
     cross.drawOutsideCrossWithColor(angles, 2, 180, 2.5, 9, 0, 'white')
-    t.penup()
-    t.setposition(base.getXCor() - 6,base.getYCor() + 2.2)
-    t.pendown()
-    cross.setHeight(cross.height / 2 )
-    cross.drawInsideCrossWithColor(angles, 4.5, 180, 5.5, 18.5, 0, 'navy')
 
 if __name__== '__main__':
-    norwayFlag()
+    DenmarkFlag()
     t.mainloop()
     t.hideturtle()

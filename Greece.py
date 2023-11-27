@@ -32,7 +32,7 @@ def createFlagStripes(base):
     stripe = Rectangle(base.length /2, _length=base.length *0.76)
     for i in range(5):
         stripe.setFillColor('#001489')
-        stripe.set_height(base.height/ 10)
+        stripe.set_height(base.height / 10)
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
         stripe.setFillColor('white')
@@ -41,6 +41,7 @@ def createFlagStripes(base):
             stripe.set_Length(base.length)
             t.penup()
             t.backward(base.length /4.21)
+            t.pendown()
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
 
@@ -55,6 +56,6 @@ def GreeceFlag(angles):
 
 if __name__ == '__main__':
     angles = (180, 0)
-    t.speed('fastest')
+    t.speed('fast')
     GreeceFlag(angles)
     t.mainloop()

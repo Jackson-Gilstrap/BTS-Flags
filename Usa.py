@@ -3,7 +3,7 @@ from Rectangle import Rectangle
 from Star import Star
 
 def createFlagBackground():
-    base = Rectangle()
+    base = Rectangle(_height=300, _length= 600)
     base.setFillColor('#0A3161')
     base.drawWithColor()
     base.updateYCor(-base.height / 1.8)
@@ -15,6 +15,7 @@ def drawStarsInline(numStars):
     gap = 10
     star = Star(5,fillColor='white')
     for i in range(numStars):
+        print(star.getStarSize())
         star.drawWithColor(180)
         t.penup()
         t.backward(gap* 2)
@@ -35,13 +36,13 @@ def createFlagStars(startX, startY):
         t.setposition(startX + 10, heightGap)
         t.pendown()
         heightGap += -10
-        print(heightGap)
+        # print(heightGap)
         drawStarsInline(5)
         t.penup()
         t.setposition(startX, heightGap)
         t.pendown()
         heightGap += -10
-        print(heightGap)
+        # print(heightGap)
     t.penup()
     t.setposition(startX, heightGap + 10)
     t.pendown()
@@ -67,7 +68,10 @@ def createFlagStripes(base):
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
 
-
+def UsaFlag():
+    base = createFlagBackground()
+    createFlagStripes(base)
+    createFlagStars(15, -5)
 
     
 
@@ -76,8 +80,5 @@ def createFlagStripes(base):
 
 if __name__ == "__main__":
     t.speed('fastest')
-    base = createFlagBackground()
-  
-    createFlagStripes(base)
-    createFlagStars(15, -5)
+    UsaFlag()
     t.mainloop()

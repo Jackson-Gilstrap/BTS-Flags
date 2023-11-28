@@ -12,7 +12,12 @@ class Rectangle(Shape):
 
     def set_Length(self, newLength):
         self.length = newLength
-    
+
+    def getHeight(self):
+        return self.height
+
+    def getLength(self):
+        return self.length    
     def draw(self):
         for i in range(2):
             t.forward(self.length)

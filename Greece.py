@@ -2,8 +2,9 @@ import turtle as t
 from Rectangle import Rectangle
 from Cross import Cross  
 
-def createFlagBackground():
-    base = Rectangle()
+def createFlagBackground(x,y):
+    base = Rectangle(_xCor=x, _yCor=y)
+    base.moveTurtle()
     base.setFillColor('#001489')
     base.drawWithColor()
     base.updateYCor(-base.height / 1.8)
@@ -29,7 +30,8 @@ def turnLeftDownRight(stripe):
     t.forward(-stripe.height)
     t.right(90)
 def createFlagStripes(base):
-    stripe = Rectangle(base.length /2, _length=base.length *0.76)
+    stripe = Rectangle(_xCor= base.getXCor() - 2.5,_yCor=base.getYCor()+ 82.2, _length=base.length *0.76)
+    stripe.moveTurtle()
     for i in range(5):
         stripe.setFillColor('#001489')
         stripe.set_height(base.height / 10)
@@ -45,8 +47,8 @@ def createFlagStripes(base):
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
 
-def GreeceFlag(angles):
-    base = createFlagBackground()
+def GreeceFlag(x,y,angles):
+    base = createFlagBackground(x,y)
     createFlagCross(base, angles)
     createFlagStripes(base)
     

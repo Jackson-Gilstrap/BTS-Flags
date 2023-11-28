@@ -2,8 +2,9 @@ import turtle as t
 from Rectangle import Rectangle
 from Star import Star
 
-def createFlagBackground():
-    base = Rectangle(_height=300, _length= 600)
+def createFlagBackground(x,y):
+    base = Rectangle(_xCor= x, _yCor= y)
+    base.moveTurtle()
     base.setFillColor('#0A3161')
     base.drawWithColor()
     base.updateYCor(-base.height / 1.8)
@@ -11,11 +12,13 @@ def createFlagBackground():
     return base
 
 
-def drawStarsInline(numStars):
+def drawStarsInline(numStars, base):
     gap = 10
-    star = Star(5,fillColor='white')
+    star = Star(5, xCor = base.getXCor() - 60, yCor= base.getYCor() + 78,fillColor='white')
+    # star.moveTurtle()
+    # print(star.getXCor(), star.getYCor())
     for i in range(numStars):
-        print(star.getStarSize())
+        # print(star.getStarSize())
         star.drawWithColor(180)
         t.penup()
         t.backward(gap* 2)
@@ -26,30 +29,54 @@ def turnLeftDownRight(stripe):
     t.backward(-stripe.height)
     t.left(90)
 
-def createFlagStars(startX, startY):
-    heightGap = -10
+def createFlagStars(startX, startY,base):
+    heightGap = -20
     rows = 4
-    t.setposition(startX, startY)
-    for lines in range(rows):
-        drawStarsInline(6)
-        t.penup()
-        t.setposition(startX + 10, heightGap)
-        t.pendown()
-        heightGap += -10
-        # print(heightGap)
-        drawStarsInline(5)
-        t.penup()
-        t.setposition(startX, heightGap)
-        t.pendown()
-        heightGap += -10
-        # print(heightGap)
     t.penup()
-    t.setposition(startX, heightGap + 10)
+    t.setposition(startX, startY)
     t.pendown()
-    drawStarsInline(6)
+    # print(startY)
+    for sixStarLines in range(rows):
+        drawStarsInline(6,base)
+        t.penup()
+        t.setposition(startX, startY + heightGap)
+        heightGap += -20
+        # print(heightGap)
+    
+    heightGap = -10
+    t.penup()
+    t.setposition(startX + 10, startY + heightGap)
+    t.pendown()
+    for fiveStarLines in range(rows):
+        drawStarsInline(5,base)
+        t.penup()
+        t.setposition(startX + 10, startY + heightGap -20) 
+        t.pendown()
+        heightGap += -20
+        print(heightGap)
+    t.penup()
+    t.setposition(startX, startY + (heightGap + 13))
+    t.pendown()
+    drawStarsInline(6,base)
+    # for lines in range(rows):
+    #     drawStarsInline(6,base)
+    #     t.penup()
+    #     t.setposition(startX + 10, heightGap - startY)
+    #     t.pendown()
+    #     heightGap += -10
+    #     print(startX,heightGap)
+    #     drawStarsInline(5,base)
+    #     t.penup()
+    #     t.setposition(startX, heightGap - startY)
+    #     t.pendown()
+    #     heightGap += -10
+    #     print(startX,heightGap)
+    
+    # drawStarsInline(6,base)
 
 def createFlagStripes(base):
-    stripe = Rectangle(base.length / 2.5, _length=base.length *0.6)
+    stripe = Rectangle(_xCor=base.getXCor() + 45, _yCor=base.getYCor() + 83, _length=base.getLength() *0.6)
+    stripe.moveTurtle()
     print(stripe.getXCor())
     t.penup()
     t.setposition(stripe.getXCor(),stripe.getYCor())
@@ -65,13 +92,14 @@ def createFlagStripes(base):
             stripe.set_Length(base.length)
             t.penup()
             t.backward(base.length /2.5)
+            t.pendown()
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
 
 def UsaFlag():
-    base = createFlagBackground()
+    base = createFlagBackground(-400, 100)
     createFlagStripes(base)
-    createFlagStars(15, -5)
+    createFlagStars(base.getXCor() -60, base.getYCor() + 78,base)
 
     
 

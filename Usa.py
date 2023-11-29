@@ -3,6 +3,7 @@ from Rectangle import Rectangle
 from Star import Star
 
 def createFlagBackground(x,y):
+    t.seth(0)
     base = Rectangle(_xCor= x, _yCor= y)
     base.moveTurtle()
     base.setFillColor('#0A3161')
@@ -96,8 +97,8 @@ def createFlagStripes(base):
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
 
-def UsaFlag():
-    base = createFlagBackground(-400, 100)
+def UsaFlag(x,y):
+    base = createFlagBackground(x,y)
     createFlagStripes(base)
     createFlagStars(base.getXCor() -60, base.getYCor() + 78,base)
 

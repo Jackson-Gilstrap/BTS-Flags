@@ -3,6 +3,7 @@ from Rectangle import Rectangle
 from Cross import Cross  
 
 def createFlagBackground(x,y):
+    t.seth(0)
     base = Rectangle(_xCor=x, _yCor=y)
     base.moveTurtle()
     base.setFillColor('#001489')
@@ -10,7 +11,8 @@ def createFlagBackground(x,y):
     base.updateYCor(-base.height / 1.8)
     base.updateXCor(base.length / 4)
     return base
-def createFlagCross(base, angles):
+def createFlagCross(base):
+    angles = (180, 0)
     cross = Cross()
     cross.setHeight(10)
     t.penup()
@@ -18,7 +20,7 @@ def createFlagCross(base, angles):
     t.right(90)
     t.forward(base.length /7.4)
     t.pendown()
-    cross.drawOutsideCrossWithColor(angles,3,90,3,3,270, 'white')
+    cross.drawWithColor(angles,3,90,3,3,270, 'white')
     t.penup()
     t.right(180)
     t.setposition(base.length / 4.21, 0)
@@ -29,6 +31,7 @@ def turnLeftDownRight(stripe):
     t.left(90)
     t.forward(-stripe.height)
     t.right(90)
+
 def createFlagStripes(base):
     stripe = Rectangle(_xCor= base.getXCor() - 2.5,_yCor=base.getYCor()+ 82.2, _length=base.length *0.76)
     stripe.moveTurtle()
@@ -47,9 +50,9 @@ def createFlagStripes(base):
         stripe.drawWithColor()
         turnLeftDownRight(stripe)
 
-def GreeceFlag(x,y,angles):
+def GreeceFlag(x,y):
     base = createFlagBackground(x,y)
-    createFlagCross(base, angles)
+    createFlagCross(base)
     createFlagStripes(base)
     
 
@@ -57,7 +60,6 @@ def GreeceFlag(x,y,angles):
 
 
 if __name__ == '__main__':
-    angles = (180, 0)
-    t.speed('fast')
-    GreeceFlag(angles)
+    t.speed('fastest')
+    GreeceFlag(-200, 0)
     t.mainloop()

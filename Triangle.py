@@ -34,7 +34,7 @@ class Triangle(Shape):
 
 
 if __name__ == '__main__':
-    t.speed('fastest')
+    t.speed('slow')
     t.title('Jermaine Williams - Triangle')
 
     triangleTest = Triangle(borderThickness=3, side=200)

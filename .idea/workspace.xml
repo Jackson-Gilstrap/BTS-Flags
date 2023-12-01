@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd4e47e6-92d6-4e55-b49b-fdd8ae7039d9" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/BTS-Flags/Japan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Candian.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pakistan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamaican.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamaican.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Triangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS-Flags" beforeDir="false" afterPath="$PROJECT_DIR$/BTS-Flags" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pakistan.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pakistan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

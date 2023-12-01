@@ -20,4 +20,3 @@ def drawCircle(x, y, color, radius):
     t.circle(radius)
     t.end_fill()
 
-def

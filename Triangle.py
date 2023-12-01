@@ -26,11 +26,28 @@ class Triangle(Shape):
             t.forward(self.side)
             t.right(120)
 
+    def drawRight(self):
+        t.pencolor(self.borderColor)
+        t.pensize(self.borderThickness)
+        numSides = 3
+        for eachSide in range(numSides):
+            t.forward(self.side)
+            t.left(120)
+
+
     def drawWithColor(self):
         t.fillcolor(self.fillColor)
         t.begin_fill()
         self.draw()
         t.end_fill()
+
+    def drawRightWithColor(self):
+        t.fillcolor(self.fillColor)
+        t.begin_fill()
+        self.drawRight()
+        t.end_fill()
+
+
 
 
 if __name__ == '__main__':

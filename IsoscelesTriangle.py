@@ -48,13 +48,6 @@ class IsoscelesTriangle(Shape):
         t.end_fill()
 
 
-    # def drawWithColorBottom(self):
-    #     t.fillcolor(self.fillColor)
-    #     t.begin_fill()
-    #     self.drawBottomTriangle()
-    #     t.end_fill()
-
-
 
 if __name__ == '__main__':
     t.speed('slow')

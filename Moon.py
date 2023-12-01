@@ -18,10 +18,10 @@ class CrescentMoon(Shape):
     def getMoonSize(self):
         return self.size
 
-    def draw(self):
+    def draw(self, rotation):
         t.pencolor(self.borderColor)
         t.pensize(self.borderThickness)
-        t.seth(0)
+        t.seth(rotation)
         partOfTheMoon = Arc(xCor=self.xCor, yCor=self.yCor, radius=self.size, extent=200, borderColor=self.borderColor)
         t.right(180)
 
@@ -32,10 +32,10 @@ class CrescentMoon(Shape):
         partOfTheMoon.setExtent(160)
         partOfTheMoon.draw()
 
-    def drawWithColor(self):
+    def drawWithColor(self,rotation):
         t.fillcolor(self.fillColor)
         t.begin_fill()
-        self.draw()
+        self.draw(rotation)
         t.end_fill()
 
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     myMoon = CrescentMoon(xCor=0, yCor=100, borderThickness=1, moonSize=100, borderColor='white', fillColor='white')
     myMoon.setFillColor('pink')
     myMoon.setBorderColor('pink')
-    myMoon.drawWithColor()
+    myMoon.drawWithColor(30)
 
 
 

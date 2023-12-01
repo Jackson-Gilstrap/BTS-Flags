@@ -44,7 +44,7 @@ def drawRightHalfLeaf():
     t.left(100)
     t.forward(75)
     t.right(90)
-    t.forward(10)
+    t.forward(10) 
 def drawLeftHalfLeaf():
     t.penup()
     t.setposition(0,100)

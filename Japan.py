@@ -1,23 +1,28 @@
 import turtle as t
 from Rectangle import Rectangle
+from Circle import Circle
 
-def drawingJapanBackground():
-    Background = Rectangle()
-    Background.setFillColor('white')
-    Background.drawWithColor()
+def createFlagBackground(x,y):
+    t.seth(0)
+    base = Rectangle(_xCor=x, _yCor=y)
+    base.moveTurtle()
+    base.setFillColor('white')
+    base.drawWithColor()
+    return base
 
-def draw_circle(color,radius):
-    t.begin_fill()
-    t.fillcolor(color)
-    t.penup()
-    t.goto(150, -120)
-    t.circle(radius)
-    t.end_fill()
+def createFlagCircle(base):
+    t.seth(0)
+    circle = Circle(base.getXCor() + base.getLength() /2, (base.getYCor() - base.getHeight() /2) - 50)
+    circle.moveTurtle()
+    circle.setFillColor('red')
+    circle.setBorderColor('red')
+    circle.drawWithColor()
+def JapanFlag(x,y):
+    base = createFlagBackground(x,y)
+    createFlagCircle(base)
 
 if __name__ == '__main__':
-    drawingJapanBackground()
-    draw_circle("black", 50)
-    draw_circle("red", 50)
+    JapanFlag(-200, 100)
     t.mainloop()
     t.hideturtle()
 

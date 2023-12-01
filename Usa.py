@@ -16,9 +16,7 @@ def createFlagBackground(x,y):
 def drawStarsInline(numStars, base):
     gap = 10
     star = Star(5, xCor = base.getXCor() - 60, yCor= base.getYCor() + 78,fillColor='white')
- 
     for i in range(numStars):
-    
         star.drawWithColor(180)
         t.penup()
         t.backward(gap* 2)
@@ -40,7 +38,6 @@ def createFlagStars(startX, startY,base):
         t.penup()
         t.setposition(startX, startY + heightGap)
         heightGap += -20
-    
     heightGap = -10
     t.penup()
     t.setposition(startX + 10, startY + heightGap)

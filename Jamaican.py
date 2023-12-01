@@ -32,6 +32,7 @@ def JamaicaFlag():
     JamaicanFlagBackGround()
     JamaicanTriangle()
     JamaicanSideTriangle()
+    
 if __name__ == '__main__':
     t.speed('slow')
     JamaicaFlag()

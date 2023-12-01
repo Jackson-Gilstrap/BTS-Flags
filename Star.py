@@ -28,9 +28,6 @@ class Star(Shape):
             t.forward(self.starSize)
             t.left(angle * 2)
 
-    
-
-
     def drawWithColor(self,rotation):
         t.fillcolor(self.fillColor)
         t.begin_fill()

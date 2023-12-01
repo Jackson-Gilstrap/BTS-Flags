@@ -25,9 +25,9 @@ def drawStar():
     Pstar.drawWithColor(angle=20)
 
 def drawMoon():
-    moon = CrescentMoon(moonSize=50, xCor=150, yCor=-50,)
+    moon = CrescentMoon(moonSize=70, xCor=210, yCor=-5,fillColor='White',borderColor='Black', borderThickness=1)
     moon.moveTurtle()
-    moon.draw()
+    moon.drawWithColor()
 
 
 

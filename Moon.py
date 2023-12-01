@@ -22,8 +22,8 @@ class CrescentMoon(Shape):
         t.pencolor(self.borderColor)
         t.pensize(self.borderThickness)
         t.seth(0)
-        partOfTheMoon = Arc(xCor=self.xCor, yCor=self.yCor, radius=self.size, extent=150, borderColor=self.borderColor)
-        t.right(90)
+        partOfTheMoon = Arc(xCor=self.xCor, yCor=self.yCor, radius=self.size, extent=200, borderColor=self.borderColor)
+        t.right(180)
 
         partOfTheMoon.draw()
         partOfTheMoon.setRadius(-partOfTheMoon.getRadius())

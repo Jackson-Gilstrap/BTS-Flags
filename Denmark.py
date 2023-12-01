@@ -28,4 +28,4 @@ def DenmarkFlag(x,y):
 if __name__== '__main__':
     DenmarkFlag(-200, 100)
     t.mainloop()
-    # t.hideturtle()
+    t.hideturtle()

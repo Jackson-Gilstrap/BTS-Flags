@@ -16,8 +16,6 @@ class Star(Shape):
     def getStarSize(self):
         return self.starSize
 
-    def drawSawTooth(self):
-        pass
 
     def draw(self, rotation):
         t.pencolor(self.borderColor)
@@ -30,29 +28,18 @@ class Star(Shape):
             t.forward(self.starSize)
             t.left(angle * 2)
 
-    def drawethiopian(self, rotation):
-        t.pencolor(self.borderColor)
-        sides = 5
-        angle = 360 / sides
-        t.seth(rotation)
-        for i in range(sides):
-            t.forward(self.starSize)
-            t.right(144)
-            t.forward(self.starSize)
-           # t.left(angle * 2)
+    
 
 
-    def drawWithColor(self,angle):
+    def drawWithColor(self,rotation):
         t.fillcolor(self.fillColor)
         t.begin_fill()
-        self.draw(angle)
+        self.draw(rotation)
         t.end_fill()
 
 
 if __name__ == '__main__':
     testStar = Star()
-   # testStar.draw(180)
-    testStar.drawethiopian(144)
-
+    testStar.draw(180)
     t.hideturtle()
     t.mainloop()

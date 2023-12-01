@@ -36,6 +36,5 @@ if __name__== '__main__':
     t.speed('fastest')
     norwayFlag(-200, 100)
     norwayFlag(400, 100)
-
     t.mainloop()
     t.hideturtle()

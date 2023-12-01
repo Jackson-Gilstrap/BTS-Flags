@@ -16,10 +16,9 @@ def createFlagBackground(x,y):
 def drawStarsInline(numStars, base):
     gap = 10
     star = Star(5, xCor = base.getXCor() - 60, yCor= base.getYCor() + 78,fillColor='white')
-    # star.moveTurtle()
-    # print(star.getXCor(), star.getYCor())
+ 
     for i in range(numStars):
-        # print(star.getStarSize())
+    
         star.drawWithColor(180)
         t.penup()
         t.backward(gap* 2)
@@ -36,13 +35,11 @@ def createFlagStars(startX, startY,base):
     t.penup()
     t.setposition(startX, startY)
     t.pendown()
-    # print(startY)
     for sixStarLines in range(rows):
         drawStarsInline(6,base)
         t.penup()
         t.setposition(startX, startY + heightGap)
         heightGap += -20
-        # print(heightGap)
     
     heightGap = -10
     t.penup()
@@ -59,22 +56,7 @@ def createFlagStars(startX, startY,base):
     t.setposition(startX, startY + (heightGap + 13))
     t.pendown()
     drawStarsInline(6,base)
-    # for lines in range(rows):
-    #     drawStarsInline(6,base)
-    #     t.penup()
-    #     t.setposition(startX + 10, heightGap - startY)
-    #     t.pendown()
-    #     heightGap += -10
-    #     print(startX,heightGap)
-    #     drawStarsInline(5,base)
-    #     t.penup()
-    #     t.setposition(startX, heightGap - startY)
-    #     t.pendown()
-    #     heightGap += -10
-    #     print(startX,heightGap)
-    
-    # drawStarsInline(6,base)
-
+  
 def createFlagStripes(base):
     stripe = Rectangle(_xCor=base.getXCor() + 45, _yCor=base.getYCor() + 83, _length=base.getLength() *0.6)
     stripe.moveTurtle()
@@ -109,5 +91,5 @@ def UsaFlag(x,y):
 
 if __name__ == "__main__":
     t.speed('fastest')
-    UsaFlag()
+    UsaFlag(-200,100)
     t.mainloop()

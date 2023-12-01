@@ -8,7 +8,7 @@ def JamaicanFlagBackGround():
     Flag.setFillColor('yellow')
     Flag.drawWithColor()
 
-def JamaicanTriangle(base):
+def JamaicanTriangle():
     triangle = IsoscelesTriangle(xCor=65, yCor=0)
     triangle.setSide(newSize=180)
     triangle.moveTurtle()
@@ -28,12 +28,13 @@ def JamaicanSideTriangle():
     triangle.moveTurtle()
     triangle.drawRightWithColor()
 
-
+def JamaicaFlag():
+    JamaicanFlagBackGround()
+    JamaicanTriangle()
+    JamaicanSideTriangle()
 if __name__ == '__main__':
     t.speed('slow')
-    JamaicanFlagBackGround()
-    JamaicanTriangle(300)
-    JamaicanSideTriangle()
+    JamaicaFlag()
     t.mainloop()
     t.hideturtle()
 

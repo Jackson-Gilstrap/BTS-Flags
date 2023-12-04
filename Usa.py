@@ -48,7 +48,6 @@ def createFlagStars(startX, startY,base):
         t.setposition(startX + 10, startY + heightGap -20) 
         t.pendown()
         heightGap += -20
-        print(heightGap)
     t.penup()
     t.setposition(startX, startY + (heightGap + 13))
     t.pendown()
@@ -57,7 +56,6 @@ def createFlagStars(startX, startY,base):
 def createFlagStripes(base):
     stripe = Rectangle(_xCor=base.getXCor() + 45, _yCor=base.getYCor() + 83, _length=base.getLength() *0.6)
     stripe.moveTurtle()
-    print(stripe.getXCor())
     t.penup()
     t.setposition(stripe.getXCor(),stripe.getYCor())
     t.pendown()

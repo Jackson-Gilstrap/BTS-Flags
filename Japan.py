@@ -12,11 +12,11 @@ def createFlagBackground(x,y):
 
 def createFlagCircle(base):
     t.seth(0)
-    circle = Circle(base.getXCor() + base.getLength() /2, (base.getYCor() - base.getHeight() /2) - 50)
-    circle.moveTurtle()
-    circle.setFillColor('red')
-    circle.setBorderColor('red')
-    circle.drawWithColor()
+    circ = Circle(base.getXCor() + base.getLength() /2, (base.getYCor() - base.getHeight() /2) - 50)
+    circ.moveTurtle()
+    circ.setFillColor('red')
+    circ.setBorderColor('white')
+    circ.drawWithColor()
 def JapanFlag(x,y):
     base = createFlagBackground(x,y)
     createFlagCircle(base)

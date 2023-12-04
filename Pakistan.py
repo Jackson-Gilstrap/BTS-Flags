@@ -6,6 +6,7 @@ from Moon import CrescentMoon
 def createFlagBackground(x,y):
     base= Rectangle(_xCor=x, _yCor=y)
     base.moveTurtle()
+    print(base.getBorderColor())
     base.setFillColor('#115740')
     base.drawWithColor()
     return base
@@ -16,7 +17,7 @@ def drawFlagStripe(base):
 
 
 def drawStar(base):
-    star = Star(xCor=base.getXCor()/8, yCor=base.getYCor()/ 2.1)
+    star = Star(xCor=base.getXCor()/8, yCor=base.getYCor()/ 1.2)
     star.moveTurtle()
     star.setStarSize(10)
     star.setFillColor("white")
@@ -24,7 +25,7 @@ def drawStar(base):
     star.drawWithColor(-40)
 
 def drawMoon(base):
-    moon = CrescentMoon(moonSize=50, xCor=base.getXCor()/4.5, yCor=base.getYCor()/1.5)
+    moon = CrescentMoon(moonSize=50, xCor=base.getXCor()/4.5, yCor=base.getYCor()/1.1)
     moon.moveTurtle()
     moon.setFillColor('white')
     moon.drawWithColor(20)
@@ -38,6 +39,6 @@ def PakistanFlag(x,y):
 
 if __name__== '__main__':
     t.speed('normal')
-    PakistanFlag(-200,100)
+    PakistanFlag(-200,300)
     t.mainloop()
     t.hideturtle()
